@@ -124,7 +124,8 @@ img {
 .punch-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex: 1 1 0px;
+    
     margin: 57px var(--sidespace) var(--vspace) var(--sidespace);
     background: none;
     justify-content: space-between;
@@ -148,8 +149,7 @@ img {
     height: auto;
 }
 
-#header-image,
-.punch-image {
+.punch-img-container img {
     width: 100%;
     height: auto;
 }
@@ -237,8 +237,6 @@ img {
     align-content: center;
     gap: 30px;
 }
-
-.partner-box {}
 
 .partner-box img {
     max-width: 100%;
