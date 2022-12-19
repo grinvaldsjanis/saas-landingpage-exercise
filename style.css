@@ -1,0 +1,279 @@
+:root {
+    background: #FFF;
+    --sidespace: 10vw;
+    --vspace: 10vw;
+    --company-orange: #FF7235;
+    font-family: 'Hind Siliguri';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px;
+}
+
+div {
+    white-space: normal;
+}
+
+
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h6 {
+    display: inline-block;
+    font-family: 'Hind Siliguri';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+img {
+    border-style: none;
+}
+
+
+/* Headbar */
+#page {
+    display: flex;
+    flex-direction: column;
+}
+
+#head-bar {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    margin: 57px var(--sidespace) 0 var(--sidespace);
+    background: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu {
+    display: flex;
+    flex-direction: row;
+    width: 385px;
+    height: 18px;
+    justify-content: space-between;
+
+}
+
+.top-menu button {
+    height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17.1px;
+    vertical-align: middle;
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+.top-menu button:hover {
+    opacity: 60%;
+}
+
+.logo-small {
+    width: 112px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.call-button {
+    height: 48px;
+    width: 160px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    outline: none;
+    background: none;
+    border-color: var(--company-orange);
+    color: var(--company-orange);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 95%;
+    margin-left: 20px;
+}
+
+/* Header */
+
+#header,
+.punch-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 57px var(--sidespace) var(--vspace) var(--sidespace);
+    background: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-left,
+.punch-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.punch-container.reversed {
+    flex-direction: row-reverse;
+}
+
+#header-right,
+.punch-img-container {
+    width: 50%;
+    height: auto;
+}
+
+#header-image,
+.punch-image {
+    width: 100%;
+    height: auto;
+}
+
+.huge-text,
+.punch-huge-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6.5vw;
+    line-height: 100%;
+}
+
+.grayed-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #BDBDBD;
+}
+
+#demo-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#try-demo-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 225px;
+    height: 75px;
+    background-color: var(--company-orange);
+    border-radius: 6px;
+    border: none;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 0px;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#slogan {
+    margin: 20px 0;
+}
+
+#platforms {
+    margin: 20px 20px;
+}
+
+/* Section 1 */
+
+#section-1 {
+
+
+    height: 712px;
+}
+
+#stats-box {
+
+    padding: 57px var(--sidespace) 0 var(--sidespace);
+    align-items: center;
+    background-color: #FF7235;
+    background-image: url(Media/svg/orange-bgr.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#stats-box img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#partners-row {
+    width: 100%;
+    padding: 57px var(--sidespace) 0 var(--sidespace);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.partner-box {}
+
+.partner-box img {
+    max-width: 100%;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #BDBDBD;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 8vw;
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+
+.link-button {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    background: none;
+    color: var(--company-orange)
+}
