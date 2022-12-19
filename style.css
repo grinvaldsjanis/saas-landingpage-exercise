@@ -229,7 +229,7 @@ img {
     padding: 57px var(--sidespace) 0 var(--sidespace);
     align-items: center;
     background-color: #FF7235;
-    background-image: url(Media/svg/orange-bgr.svg);
+    background-image: url(media/svg/orange-bgr.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
