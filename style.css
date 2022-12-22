@@ -6,29 +6,89 @@
     font-family: 'Hind Siliguri';
 }
 
-* {
-    margin: 0;
-    padding: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html {
-    font: normal 16px;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
 }
 
-div {
-    white-space: normal;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
 }
 
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
 
+/* Set core body defaults */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
 
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    border-style: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* button {
+    display: block;
+} */
+
+h1,
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(1rem, 1rem + 5vw, 6rem);
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
 }
 
 h6 {
-    display: inline-block;
     font-family: 'Hind Siliguri';
     font-style: normal;
     font-weight: 400;
@@ -48,34 +108,47 @@ pre {
     /* 2 */
 }
 
-img {
-    border-style: none;
+.content-container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    padding: 0 45px;
+    text-align: center;
 }
 
-
-/* Headbar */
-#page {
-    display: flex;
-    flex-direction: column;
+header {
+    min-height: 48px;
+    margin-top: 57px;
 }
+
+.content-box {
+    vertical-align: top;
+    margin: 3rem auto;
+    width: 100%;
+    
+}
+
 
 #head-bar {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     height: 48px;
     margin: 57px var(--sidespace) 0 var(--sidespace);
     background: none;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
 
 .top-menu {
+    margin: 0 auto 20px auto;
     display: flex;
     flex-direction: row;
-    width: 385px;
+    max-width: 385px;
     height: 18px;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .top-menu button {
@@ -96,62 +169,43 @@ img {
 }
 
 .logo-small {
-    width: 112px;
-    height: 40px;
-    margin-right: 20px;
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 250px;
+    height: auto;
 }
 
 .call-button {
+    margin: auto;
     height: 48px;
     width: 160px;
-    border: solid;
+    border: 1px solid var(--company-orange);
     border-width: 1px;
     border-radius: 8px;
     outline: none;
     background: none;
-    border-color: var(--company-orange);
     color: var(--company-orange);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 95%;
-    margin-left: 20px;
 }
 
 .call-button:hover {
     border-width: 2px;
 }
 
-/* Header */
-
-#header,
-.punch-container {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 0px;
-    
-    margin: 57px var(--sidespace) var(--vspace) var(--sidespace);
-    background: none;
-    justify-content: space-between;
+#header-container {
     align-items: center;
 }
 
-#header-left,
-.punch-text-container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
+
+
 .punch-container.reversed {
     flex-direction: row-reverse;
 }
 
-#header-right,
-.punch-img-container {
-    width: 50%;
-    height: auto;
-}
+
 
 .punch-img-container img {
     width: 100%;
@@ -167,44 +221,40 @@ img {
 }
 
 .grayed-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5vw;
-    line-height: 2vw;
     color: #BDBDBD;
 }
 
-#demo-section {
-    display: flex;
+.demo-section {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 }
 
-#try-demo-button {
+.try-demo-button {
     display: flex;
+    margin: 1rem auto;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 16vw;
-    height: 8vw;
+    width: 225px;
+    min-height: 75px;
     background-color: var(--company-orange);
     border-radius: 6px;
     border: none;
     color: #FFF;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.3vw;
-    line-height: 0px;
     vertical-align: middle;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#try-demo-button:hover {
+.try-demo-button:hover {
     opacity: 90%;
 }
 
-#try-demo-button:hover span {
+.try-demo-button:hover span {
     padding-top: 3px;
 }
 
@@ -224,9 +274,8 @@ img {
     height: 712px;
 }
 
-#stats-box {
-
-    padding: 57px var(--sidespace) 0 var(--sidespace);
+.orange {
+    padding-top: 4vw;
     align-items: center;
     background-color: #FF7235;
     background-image: url(media/svg/orange-bgr.svg);
@@ -239,19 +288,17 @@ img {
     vertical-align: bottom;
 }
 
-#partners-row {
-    width: 100%;
-    padding: 57px var(--sidespace) 0 var(--sidespace);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    gap: 30px;
+.partners {
+display: flex;
+align-content: flex-start;
+flex-wrap: wrap;
+justify-content: space-around;
+
 }
 
-.partner-box img {
+.partner-logo {
     max-width: 100%;
+    margin: 20px;
 }
 
 .subtitle {
@@ -286,4 +333,38 @@ img {
     vertical-align: middle;
     background: none;
     color: var(--company-orange)
+}
+
+@media (min-width: 40em) {
+    .split {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        
+    }
+
+    .logo-small {
+        margin: 0;
+        width: 112px;
+        height: 40px;
+    }
+
+    .call-button {
+        margin: 0;
+
+    }
+
+    .top-menu {
+        margin: 0
+    }
+
+    .content-container {
+        text-align: center;
+    }
+
+    .content-box {
+        justify-content: flex-start;
+        text-align: left;
+        width: 50%;
+    }
 }
